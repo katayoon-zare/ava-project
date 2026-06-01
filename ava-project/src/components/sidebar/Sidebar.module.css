@@ -1,0 +1,106 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 170px;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 18px 16px;
+  direction: rtl;
+
+  background: linear-gradient(180deg, #12c0b0 0%, #10b4a6 55%, #0ea99c 100%);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+  margin-bottom: 74px;
+}
+
+.logoText {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1;
+}
+
+.logoMark {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 22px;
+}
+
+.logoBar {
+  width: 3px;
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.logoBar:nth-child(1) {
+  height: 12px;
+}
+.logoBar:nth-child(2) {
+  height: 18px;
+}
+.logoBar:nth-child(3) {
+  height: 14px;
+}
+
+.nav {
+    margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 12px;
+}
+
+.navItem {
+  height: 44px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 14px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+
+  background: transparent;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: inherit;
+  text-decoration: none;
+
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.itemText {
+  white-space: nowrap;
+}
+
+.itemIcon {
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.95;
+}

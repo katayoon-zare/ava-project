@@ -1,0 +1,12 @@
+.layout {
+  min-height: 100vh;
+  direction: rtl;
+  background: #fff;
+}
+
+.main {
+  min-height: 100vh;
+  margin-right: 170px; 
+  padding: 24px 32px;
+  box-sizing: border-box;
+}
