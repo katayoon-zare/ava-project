@@ -3,13 +3,15 @@ import styles from "./NewFileModal.module.css";
 
 type StatusOption = "completed" | "pending" | "processing" | "failed";
 
-interface NewFileModalProps {
+interface NewFileModalProps{
   isOpen: boolean;
   onClose: () => void;
+  onSuccess?: () => void; 
   onSubmit: (data: {
     title: string;
     status: StatusOption;
     date: string;
+
     duration: string;
   }) => void;
   defaultValues?: {
@@ -41,6 +43,7 @@ export default function NewFileModal({
   onClose,
   onSubmit,
   defaultValues,
+  onSuccess,
 }: NewFileModalProps) {
   const initialValues = useMemo(
     () => ({
@@ -85,6 +88,8 @@ export default function NewFileModal({
       date,
       duration,
     });
+
+    onSuccess?.();
 
     resetForm();
     onClose();

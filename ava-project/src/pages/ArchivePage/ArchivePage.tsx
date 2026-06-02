@@ -178,6 +178,7 @@ export default function ArchivePage() {
       <NewFileModal
         isOpen={isNewFileModalOpen}
         onClose={() => setIsNewFileModalOpen(false)}
+         onSubmit={(data) => console.log("submitted:", data)}
         onSuccess={handleNewFileSuccess}
       />
     </section>
