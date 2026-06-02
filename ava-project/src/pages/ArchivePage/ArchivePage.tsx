@@ -82,8 +82,6 @@ export default function ArchivePage() {
   }, [query, statusFilter]);
 
   function handleNewFileSuccess(): void {
-    // اینجا محل ریفرش لیست/dispatch مجدد است (وقتی دیتا واقعی شد)
-    // فعلاً فقط مودال بسته می‌شود
     setIsNewFileModalOpen(false);
   }
 

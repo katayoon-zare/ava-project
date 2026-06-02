@@ -6,16 +6,16 @@ type SubmitSpeechPayload = {
 };
 
 export const submitSpeechFromRecording = createAsyncThunk<
-  string, // Return type (transcript)
-  SubmitSpeechPayload, // Payload type
-  { rejectValue: string } // Error type
+  string,
+  SubmitSpeechPayload, 
+  { rejectValue: string } 
 >("speech/submitSpeechFromRecording", async ({ mediaUrl }, thunkApi) => {
   try {
     if (!mediaUrl) {
       return thunkApi.rejectWithValue("آدرس فایل صوتی معتبر نیست.");
     }
 
-    // جلوگیری از ارسال Blob URL محلی به API عمومی
+   
     if (mediaUrl.startsWith("blob:")) {
       return thunkApi.rejectWithValue(
         "این سرویس فقط لینک‌های عمومی را می‌پذیرد. ابتدا فایل را آپلود کنید."

@@ -1,4 +1,4 @@
-// src/features/speech/speechThunks.ts
+
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { transcribeFromUrl } from "../../api/transcribe";
 
@@ -14,7 +14,7 @@ function getErrorMessage(error: unknown): string {
 }
 
 export const submitSpeechFromRecording = createAsyncThunk<
-  string, // fulfilled payload = transcript text
+  string, 
   SubmitSpeechFromRecordingArg,
   { rejectValue: RejectValue }
 >("speech/submitSpeechFromRecording", async ({ mediaUrl }, thunkApi) => {
@@ -29,7 +29,7 @@ export const submitSpeechFromRecording = createAsyncThunk<
       );
     }
 
-    // transcribeFromUrl MUST return string (final transcript)
+  
     const text = await transcribeFromUrl(mediaUrl);
 
     if (!text.trim()) {

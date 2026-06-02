@@ -1,4 +1,3 @@
-// src/features/speech/useSpeechRecorder.ts
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useAppDispatch } from "../../store/hooks";
 import {
@@ -81,7 +80,7 @@ export function useSpeechRecorder() {
         setAudioBlob(blob);
         setLocalAudioUrl(url);
 
-        // توجه: این url از نوع blob: است و برای API مستقیم قابل ارسال نیست.
+       
         dispatch(setFile(file));
         dispatch(setAudioUrl(url));
         dispatch(setRecording(false));
